@@ -1,0 +1,6 @@
+{
+  "name": "مكتبة خرائط الـ Funnels | Visual Funnel Maps Library",
+  "description": "المكتبة البصرية الاستراتيجية لخرائط الـ Funnels — 25 خريطة احترافية لرحلة العميل وأنظمة التحويل الرقمي إعداد محمد عادل",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

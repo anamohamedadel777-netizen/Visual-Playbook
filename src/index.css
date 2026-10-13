@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #05070B;
+    --bg-navy: #0B111A;
+    --bg-card: #101823;
+    --bg-card-deep: #0D141D;
+    --gold-primary: #F2C45C;
+    --gold-warm: #D99B25;
+    --cream: #F7F3E8;
+    --text-muted: #AAB2BF;
+    --success: #19C878;
+  }
+
+  body {
+    font-family: 'Cairo', 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #05070B;
+    color: #F7F3E8;
+    overflow-x: hidden;
+  }
+}
+
+.font-cairo {
+  font-family: 'Cairo', sans-serif;
+}
+
+.font-ibm {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+.font-latin {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B111A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A2638;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F2C45C;
+}
+
+/* A4 Page Formatting for Screen and PDF Print */
+.a4-page {
+  width: 210mm;
+  min-height: 297mm;
+  height: 297mm;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #05070B;
+  color: #F7F3E8;
+}
+
+/* Screen presentation aspect ratio */
+@media screen {
+  .a4-page-screen {
+    width: 100%;
+    max-width: 860px;
+    aspect-ratio: 1 / 1.4142;
+    min-height: auto;
+    height: auto;
+  }
+}
+
+/* Print Specific Rules */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #05070B !important;
+    color: #F7F3E8 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .a4-page {
+    width: 210mm !important;
+    height: 297mm !important;
+    min-height: 297mm !important;
+    max-height: 297mm !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin: 0 !important;
+    padding: 20mm !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
